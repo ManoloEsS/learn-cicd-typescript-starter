@@ -40,4 +40,4 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Check for formatting issues
-        run: nm run format:check
+        run: npm run format:check
