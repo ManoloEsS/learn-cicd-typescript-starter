@@ -39,20 +39,20 @@ describe("getAPIKey", () => {
 
   test("should return null when no authorization field", () => {
     const header: IncomingHttpHeaders = {};
-    expect(getAPIKey(header)).toBeNull;
+    expect(getAPIKey(header)).toBeNull();
   });
 
   test("should return null when authorization header does not contain ApiKey", () => {
     const header: IncomingHttpHeaders = {
       authorization: "noApiKey 123",
     };
-    expect(getAPIKey(header)).toBeNull;
+    expect(getAPIKey(header)).toBeNull();
   });
 
-  test("should return null when split auth's length !== 2", () => {
+  test("should return second item when split auth's length > 2", () => {
     const header: IncomingHttpHeaders = {
       authorization: "ApiKey 456 457",
     };
-    expect(getAPIKey(header)).toBeNull;
+    expect(getAPIKey(header)).toBe("456");
   });
 });
