@@ -9,6 +9,7 @@ export default defineConfig([
         files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
         plugins: { js },
         extends: ["js/recommended"],
+        ignores: ["**/dist/**", "**/coverage/**"],
     },
     {
         files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
