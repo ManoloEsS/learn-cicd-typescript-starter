@@ -35,4 +35,5 @@ jobs:
         run: 'gcloud info'
 
       - name: 'Build docker image'
-        run: 'gcloud builds submit --tag us-central1-docker.pkg.dev/gen-lang-client-0090162332/notely-ar-repo/notely:latest .' 
+        run: 'gcloud builds submit --project gen-lang-client-0090162332 --tag us-central1-docker.pkg.dev/gen-lang-client-0090162332/notely-ar-repo/notely:latest .'
+' 
